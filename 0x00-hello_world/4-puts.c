@@ -1,7 +1,14 @@
-#include <stdio.h>
-/*main-c entry point
- * Return-always o*/
+#include<stdio.h>
 
+/**
+ *
+ *  * main - Entry point
+ *
+ *   *
+ *
+ *    * Return: Always 0 (Success)
+ *
+ *     */
 
 int main(void)
 
