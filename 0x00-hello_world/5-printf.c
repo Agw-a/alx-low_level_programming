@@ -1,7 +1,6 @@
 #include <stdio.h>
 /**
- * main - Entry point
- * return: always 0 (Sucess)
+ * main - prints with proper grammar, but the outcome is a piece of art using printf.
  */
 int main(void)
 
