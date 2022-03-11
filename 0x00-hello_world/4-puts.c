@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+/*main-c entry point
+ * Return-always o*/
 
 
 int main(void)
