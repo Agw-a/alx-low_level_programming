@@ -11,6 +11,8 @@ int main(void)
 
 	int i, e, g, h, op1, op2;
 
+
+
 	i = e = g = h = 48;
 	while (h < 58)
 	{
@@ -21,9 +23,7 @@ int main(void)
 	while (e < 58)
 	{
 	i = 48;
-	while (i < 58)
-	{										op1 = (h * 10) + g;								op2 = (e * 10) + i;
-	if (op1 < op2)
+	while (i < 58)									{										op1 = (h * 10) + g;																		op2 = (e * 10) + i;																		if (op1 < op2)
 	{
 	putchar(h);
 	putchar(g);									putchar(' ');									putchar(e);
@@ -38,6 +38,9 @@ int main(void)
 	}
 	h++;
 	}
+
 	putchar('\n');
+
 	return (0);
+
 }
