@@ -3,7 +3,7 @@
  * _abs - Computes the absolute value
  * of an integer.
  *
- * @l: input number as an integer.
+ * @l: input number as an integer(for fumction).
  *
  * Return: absolute value
  */
