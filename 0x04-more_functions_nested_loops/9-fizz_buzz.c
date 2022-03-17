@@ -10,10 +10,10 @@ int main(void)
 
 	n = 1;
 	printf("%d", n);
-	for (n >= 2; n <= 100; n++)
-	{
+	for (n = 2; n <= 100; n++)
 	{
 	if ((n % 3 == 0) && (n % 5 == 0))
+	{
 	printf(" FizzBuzz");
 	}
 	else if (n % 3 == 0)
