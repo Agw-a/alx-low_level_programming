@@ -2,7 +2,7 @@
 /**
  * _isdigit - checks if parameter is a number between 0 to 
  * @c:input number
- * Return: 1 if a number (0-9), 0 if othyer case.
+ * Return: 1 if a number (0-9), 0 if other case.
  */
 int _isdigit(int c)
 {
