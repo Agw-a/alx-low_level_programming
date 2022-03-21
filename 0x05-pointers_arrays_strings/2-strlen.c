@@ -2,13 +2,12 @@
 
 /**
  *_strlen - returns the length of a string.
- *@a:First integer
- *@b:Second integer
- *Return:no return
+ *@s:String
+ *Return:count
  */
 int _strlen(char *s)
 {
-	int c = *a;
+	int count = 0;
 
 	while (*(s + count) != '\0');
 	count++;
