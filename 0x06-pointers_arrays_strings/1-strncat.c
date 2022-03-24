@@ -5,7 +5,7 @@
  * @dest:destination
  * @src:source
  * @n:bytes used from src
- * return:pointer to the resulting string dest.
+ * return:pointer to dest.
  */
 char *_strncat(char *dest, char *src, int n)
 {
