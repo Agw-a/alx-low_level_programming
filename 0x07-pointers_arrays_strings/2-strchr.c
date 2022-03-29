@@ -4,7 +4,7 @@
  * _strchr-locates character in string
  * @s:string
  * @c:character
- * return:pointer to the first occurrence of the character c
+ * Return:pointer to the first occurrence of the character c
  */
 char *_strchr(char *s, char c)
 {
