@@ -3,7 +3,7 @@
 
 /**
  * create_array-creates an array of chars.
- * @size:size of an array.
+ * @size:size of array.
  * @c:stored char.
  *
  * Return:a pointer to the array of chars.
@@ -21,4 +21,4 @@ char *create_array(unsigned int size, char c)
 	for (i = 0; i < size; i++)
 	cl[i] = c;
 	return (cl);
-}	
+}
