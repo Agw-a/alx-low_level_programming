@@ -6,7 +6,7 @@
  * @grid:multidimensional array of integers.
  * @height:height of the grid
  *
- * Return:ne return
+ * Return:no return
  */
 void free_grid(int **grid, int height)
 {
