@@ -24,10 +24,10 @@ char *str_concat(char *s1, char *s2)
 	stropt = malloc(sizeof(char) * (i + j + 1));
 	if (stropt == NULL)
 	{
-	free (stropt);
+	free(stropt);
 	return (NULL);
 	}
-	for (k = 0; k < 1; k++)
+	for (k = 0; k < i; k++)
 	stropt[k] = s1[k];
 	limit = j;
 	for (j = 0; j <= limit; k++, j++)
