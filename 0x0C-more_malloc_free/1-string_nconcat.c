@@ -8,7 +8,7 @@
  * @n:amount of bytes
  *
  * Return:pointer to a newly allocated space
- * if function fails null is returned.
+ * if malloc fails, status value is equal to 98.
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
