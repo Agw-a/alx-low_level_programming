@@ -26,7 +26,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n > js2)
 	n = js2;
 	jstrno = js1 + n;
-	strno = malloc (jstrno + 1);
+	strno = malloc(jstrno + 1);
 	if (strno == NULL)
 	return (NULL);
 	for (i = 0; i < jstrno; i++)
