@@ -7,7 +7,7 @@
  * @cmp:pointer to the function used to
  * compare values
  *
- * Return:the index of the first element 
+ * Return:the index of the first element
  * for which the cmp does not return 0
  * If no element matches, return -1
  * If size <= 0, return -1
