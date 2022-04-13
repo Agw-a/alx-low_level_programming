@@ -10,7 +10,7 @@
  * @op:the operator
  * @f:the function associated
  */
-tyoedef struct op
+typedef struct op
 {
 	char *op;
 	int (*f)(int a, int b);
