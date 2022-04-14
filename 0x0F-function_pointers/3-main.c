@@ -1,7 +1,7 @@
 #include "3-calc.h"
 
 /**
- * main-checks operator code
+ * main-checks the code
  * @argc:argument count
  * @argv:argument vector
  *
