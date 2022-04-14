@@ -9,9 +9,7 @@
 void print_all(const char * const format, ...)
 {
 	va_list formp;
-	unsigned int i = 0;
-	unsigned int j;
-	unsigned int c = 0;
+	unsigned int i = 0, j, c = 0;
 	char *str;
 	const char t_arg[] = "cifs";
 
@@ -34,8 +32,10 @@ void print_all(const char * const format, ...)
 	break;
 	case 'i':
 	printf("%d", va_arg(formp, int)), c = 1;
+	break;
 	case 'f':
 	printf("%f", va_arg(formp, double)), c = 1;
+	break;
 	case 's':
 	str = va_arg(formp, char *), c = 1;
 	if (!str)
