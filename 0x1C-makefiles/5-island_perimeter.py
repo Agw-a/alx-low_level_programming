@@ -1,8 +1,13 @@
 #!/usr/bin/python3
 
+"""
+Module that returns perimeret of island
+"""
+
+
 def island_perimeter(grid):
     """
-    Module that returns perimeret of island
+    Returns the perimiter of island defined by grid
     """
     perimeter = 0
     for row in range(len(grid)):
