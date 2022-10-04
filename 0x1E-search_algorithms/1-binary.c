@@ -2,10 +2,11 @@
 
 
 /**
- * find_val:recursively find a value in an array
+ * find_val-function that recursively finds a value in a sorted array
  * @low:lower half of array
  * @high:higher array index
  * @value:value to search for
+ * @array:pointer to first element in the array
  * Return:-1 if value is not found or index of value
  */
 int find_val(int *array, size_t low, size_t high, int value)
@@ -16,7 +17,7 @@ int find_val(int *array, size_t low, size_t high, int value)
 	if (!array || low > high)
 		return (-1);
 	printf("Searching in array: ");
-	for (mid = low; mid <= high;mid++)
+	for (mid = low; mid <= high; mid++)
 	{
 		if (mid != low)
 			printf(", ");
@@ -28,12 +29,12 @@ int find_val(int *array, size_t low, size_t high, int value)
 		return (mid);
 	else if (array[mid] > value)
 		i = (find_val(array, low, mid - 1, value));
-	else if(array[mid] < value)
+	else if (array[mid] < value)
 		i = (find_val(array, high, mid + 1, value));
-	return(i);
+	return (i);
 }
 /**
- * binary_search-function that searches for a value in a sorted array of integer
+ * binary_search-function that searches for a value in sorted array of integer
  * @array:pointer to first element of array
  * @size:number of elements in array
  * @value:value to search for
