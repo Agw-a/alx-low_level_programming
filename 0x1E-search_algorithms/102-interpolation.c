@@ -25,9 +25,9 @@ int interpolate(int *array, size_t low, size_t high, size_t size, int value)
 	if (value == array[pos])
 		return (pos);
 	else if (value > array[pos])
-		x = inter(array, pos + 1, high, size, value);
+		x = interpolate((array, pos + 1, high, size, value);
 	else if (value < array[pos])
-		x = inter(array, low, pos - 1, size, value);
+		x = interpolate((array, low, pos - 1, size, value);
 	return (x);
 }
 
@@ -42,5 +42,5 @@ int interpolation_search(int *array, size_t size, int value)
 {
 	if (!array)
 		return (-1);
-	return (inter(array, 0, size - 1, size, value));
+	return (interpolate((array, 0, size - 1, size, value));
 }
