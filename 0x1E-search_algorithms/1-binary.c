@@ -1,36 +1,37 @@
 #include "search_algos.h"
 
 /**
- * binary_recursive - a function that recursively searches for a value
+ * recursiveBinarySearch - a function that recursively searches for a value
  * in a sorted array of integers using the Binary search algorithm
  * @array: the array of integers
- * @first: first index of the array
- * @last: last index of the array
+ * @first_idx: first index of the array
+ * @last_idx: last index of the array
  * @value: the value to search for
  * Return: returns the index of value or -1 if not found
  */
-int binary_recursive(int *array, size_t first, size_t last, int value)
+int recursiveBinarySearch(int *array, size_t first_idx, size_t last_idx,
+		int value)
 {
-	size_t mid;
+	size_t mid_idx;
 	int x;
 
-	if (!array || last < first)
+	if (!array || last_idx < first_idx)
 		return (-1);
 	printf("Searching in array: ");
-	for (mid = first; mid <= last; mid++)
+	for (mid_idx = first_idx; mid <= last_idx; mid_idx++)
 	{
-		if (mid != first)
+		if (mid_idx != first_idx)
 			printf(", ");
-		printf("%d", array[mid]);
+		printf("%d", array[mid_idx]);
 	}
 	printf("\n");
-	mid = (first + last) / 2;
-	if (array[mid] == value)
-		return (mid);
-	else if (array[mid] > value)
-		x = (binary_recursive(array, first, mid - 1, value));
-	else if (array[mid] < value)
-		x = (binary_recursive(array, mid + 1, last, value));
+	mid_idx = (first_idx + last_idx) / 2;
+	if (array[mid_idx] == value)
+		return (mid_idx);
+	else if (array[mid_idx] > value)
+		x = (recursiveBinarySearch(array, first_idx, mid_idx - 1, value));
+	else if (array[mid_idx] < value)
+		x = (recursiveBinarySearch(array, mid_idx + 1, last_idx, value));
 	return (x);
 }
 
