@@ -1,48 +1,50 @@
 #include "search_algos.h"
 
-
 /**
- * find_val-function that recursively finds a value in a sorted array
- * @low:lower half of array
- * @high:higher array index
- * @value:value to search for
- * @array:pointer to first element in the array
- * Return:-1 if value is not found or index of value
+ * binary_recursive - a function that recursively searches for a value
+ * in a sorted array of integers using the Binary search algorithm
+ * @array: the array of integers
+ * @first: first index of the array
+ * @last: last index of the array
+ * @value: the value to search for
+ * Return: returns the index of value or -1 if not found
  */
-int find_val(int *array, size_t low, size_t high, int value)
+int binary_recursive(int *array, size_t first, size_t last, int value)
 {
 	size_t mid;
-	int i;
+	int x;
 
-	if (!array || low > high)
+	if (!array || last < first)
 		return (-1);
 	printf("Searching in array: ");
-	for (mid = low; mid <= high; mid++)
+	for (mid = first; mid <= last; mid++)
 	{
-		if (mid != low)
+		if (mid != first)
 			printf(", ");
-		printf("%ld", array[mid]);
+		printf("%d", array[mid]);
 	}
 	printf("\n");
-	mid = (low + high) / 2;
+	mid = (first + last) / 2;
 	if (array[mid] == value)
 		return (mid);
 	else if (array[mid] > value)
-		i = (find_val(array, low, mid - 1, value));
+		x = (binary_recursive(array, first, mid - 1, value));
 	else if (array[mid] < value)
-		i = (find_val(array, high, mid + 1, value));
-	return (i);
+		x = (binary_recursive(array, mid + 1, last, value));
+	return (x);
 }
+
 /**
- * binary_search-function that searches for a value in sorted array of integer
- * @array:pointer to first element of array
- * @size:number of elements in array
- * @value:value to search for
- * Return:index where value is located or -1 if array is null
+ * binary_search - a function that searches for a value
+ * in a sorted array of integers using the Binary search algorithm
+ * @array: the array of integers
+ * @size: size of the array
+ * @value: the value to search for
+ * Return: returns the index of value or -1 if not found
  */
 int binary_search(int *array, size_t size, int value)
 {
 	if (!array)
 		return (-1);
-	return (find_val(array, 0, size - 1, value));
+	return (binary_recursive(array, 0, size - 1, value));
 }
