@@ -1,15 +1,16 @@
 #include "search_algos.h"
 
 /**
- * interpolate-recursively interpolate through array(search)
- * @array:array of values
- * @low:first index in array
- * @high:last index in array
- * @size:size of array
- * @value:value to locate in array
- * Return:index of value.
+ * inter - a function that recursively searches for a value
+ * in a sorted array of integers using the Interpolation search algorithm
+ * @array: the array
+ * @low: first index
+ * @high: last index
+ * @size: size of the array
+ * @value: value to search for
+ * Return: index of value or -1
  */
-int interpolate(int *array, size_t low, size_t high, size_t size, int value)
+int inter(int *array, size_t low, size_t high, size_t size, int value)
 {
 	size_t pos;
 	int x;
@@ -25,22 +26,23 @@ int interpolate(int *array, size_t low, size_t high, size_t size, int value)
 	if (value == array[pos])
 		return (pos);
 	else if (value > array[pos])
-		x = interpolate((array, pos + 1, high, size, value);
+		x = inter(array, pos + 1, high, size, value);
 	else if (value < array[pos])
-		x = interpolate((array, low, pos - 1, size, value);
+		x = inter(array, low, pos - 1, size, value);
 	return (x);
 }
 
 /**
- * interpolation_search-searches for a value in a sorted array of integers
- * @array:pointer to the first element of the array to search
- * @size:number of elements in array
- * @value:the value to search
- * Return:index of value or -1 on failure
+ * interpolation_search - a function that searches for a value
+ * in a sorted array of integers using the Interpolation search algorithm
+ * @array: the array
+ * @size: size of the array
+ * @value: value to search for
+ * Return: index of value or -1
  */
 int interpolation_search(int *array, size_t size, int value)
 {
 	if (!array)
 		return (-1);
-	return (interpolate((array, 0, size - 1, size, value));
+	return (inter(array, 0, size - 1, size, value));
 }
